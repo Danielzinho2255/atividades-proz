@@ -1,0 +1,21 @@
+// Instalação do create-react-app (execute no terminal)
+// npx create-react-app meu-app-react
+
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+
+// Componente funcional
+function App() {
+  const [contador, setContador] = useState(0);
+
+  return (
+    <div>
+      <h1>Meu Aplicativo React</h1>
+      <p>Contador: {contador}</p>
+      <button onClick={() => setContador(contador + 1)}>Incrementar</button>
+    </div>
+  );
+}
+
+// Renderização do componente no elemento root do HTML
+ReactDOM.render(<App />, document.getElementById('root'));
